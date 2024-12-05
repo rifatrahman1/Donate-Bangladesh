@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = 'light' set>
+<html lang="en" data-theme='light' set>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- lexend font by google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Nothing+You+Could+Do&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Nothing+You+Could+Do&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- tailwind and daisy ui cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>    
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Donate Bangladesh</title>
     <style>
         .font-lexend {
@@ -17,10 +20,11 @@
         }
     </style>
 </head>
+
 <body class="font-lexend">
-    
+
     <!-- navbar section start -->
-     <nav>
+    <nav>
         <div class=" bg-[#F9F7F3]  ">
             <div class="w-11/12	 mx-auto flex items-center justify-around pt-9 py-20">
                 <div>
@@ -38,19 +42,95 @@
         </div>
         <div class="flex items-center justify-center mt-20 gap-4">
             <button class="bg-[#B4F461] text-xl font-semibold py-4 px-8 rounded-lg">Donation</button>
-            <button class="text-xl font-semibold py-4 px-8 rounded-lg text-[#111111B3] border border-[#1111114D]">History</button>
+            <button
+                class="text-xl font-semibold py-4 px-8 rounded-lg text-[#111111B3] border border-[#1111114D]">History</button>
         </div>
-     </nav>
+    </nav>
     <!-- navbar section end -->
 
     <!-- main section start -->
-     <main>
+    <main class="mt-8">
         <!-- donation section start -->
-         <section>
-            
-         </section>
+        <section class="lg:w-[1170px] mx-auto space-y-8 mb-8">
+            <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
+                <!-- noakhali donation images-->
+                <div>
+                    <img src="./assets/noakhali.png" alt="">
+                </div>
+                <!-- noakhali title -->
+                <div class="mt-4 lg:mt-0">
+                    <div class="flex w-[110px] items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
+                        <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="">
+                        <p class="text-[#111111B3]"><span>0</span> BDT</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to <br> homes infrastructure. Your
+                        donation will help provide essential <br> supplies and to those affected by this disaster. Every
+                        contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
+                        efforts and making a positive impact on the lives of those in need.</p>
+                    <input id="donation" type="number"
+                        class="w-full mt-6 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        placeholder="Write Donation Amount" />
+                    <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
+                        ⚠️ Invalid Amount!
+                    </p>
+                    <button class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate Now</button>
+                </div>
+            </div>
+            <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
+                <!-- feni donation images-->
+                <div>
+                    <img class="h-[390px] w-[522px]" src="./assets/feni.png" alt="">
+                </div>
+                <!-- feni title -->
+                <div class="mt-4 lg:mt-0">
+                    <div class="flex w-[110px] items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
+                        <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="">
+                        <p class="text-[#111111B3]"><span>0</span> BDT</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Donate for Flood Relief in Feni,Bangladesh</h3>
+                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to <br> homes infrastructure. Your
+                        donation will help provide essential <br> supplies and to those affected by this disaster. Every
+                        contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
+                        efforts and making a positive impact on the lives of those in need.</p>
+                    <input id="donation" type="number"
+                        class="w-full mt-6 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        placeholder="Write Donation Amount" />
+                    <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
+                        ⚠️ Invalid Amount!
+                    </p>
+                    <button class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate Now</button>
+                </div>
+            </div>
+            <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
+                <!-- noakhali donation images-->
+                <div>
+                    <img class="h-[390px] w-[522px]" src="./assets/quota-protest.png" alt="">
+                </div>
+                <!-- noakhali title -->
+                <div class="mt-4 lg:mt-0">
+                    <div class="flex w-[110px] items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
+                        <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="">
+                        <p class="text-[#111111B3]"><span>0</span> BDT</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Aid for Injured in the Quota Movement</h3>
+                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to <br> homes infrastructure. Your
+                        donation will help provide essential <br> supplies and to those affected by this disaster. Every
+                        contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
+                        efforts and making a positive impact on the lives of those in need.</p>
+                    <input id="donation" type="number"
+                        class="w-full mt-6 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        placeholder="Write Donation Amount" />
+                    <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
+                        ⚠️ Invalid Amount!
+                    </p>
+                    <button class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate Now</button>
+                </div>
+            </div>
+        </section>
         <!-- donation section end -->
-     </main>
+    </main>
     <!-- main section end -->
 </body>
+
 </html>
