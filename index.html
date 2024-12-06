@@ -74,7 +74,7 @@
                     <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
                         ⚠️ Invalid Amount!
                     </p>
-                    <button id="noakhali_donate_btn" class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate Now</button>
+                    <button id="noakhali_donate_btn" class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4"onclick="my_modal_1.showModal()">Donate Now</button>
                 </div>
             </div>
             <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
@@ -131,9 +131,10 @@
 
 
         <!-- modal section start -->
+
          <!-- You can open the modal using ID.showModal() method -->
-<button class="btn flex justify-center " onclick="my_modal_1.showModal()">open modal</button>
-<dialog id="my_modal_1" class="modal">
+
+<dialog id="my_modal_1" class="modal hidden">
         <section class="bg-white px-20 py-12 font-roboto  w-[700px] h-[500px] rounded-2xl flex flex-col justify-center items-center text-center">
             <!-- <img src="./images/.png" alt=""> -->
             <h3 class="text-5xl font-bold text-[#27AE60] mt-10">Congrates!</h3>

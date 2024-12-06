@@ -23,7 +23,6 @@ document.getElementById('noakhali_donate_btn').addEventListener('click', functio
     }
 
     const noakhali_donate_amount = noakhali_donate_current_amount + noakhali_input;
-    console.log(noakhali_donate_amount);
     document.getElementById('noakhali_donate_current_amount').innerText = noakhali_donate_amount;
     
 
