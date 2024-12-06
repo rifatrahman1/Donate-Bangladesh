@@ -16,13 +16,16 @@ document.getElementById('history_tab').addEventListener('click', function () {
 });
 
 
+function showModal (rifat, hasan) {
+console.log(rifat, hasan);
+}
 
 
 
 
+// main section part
 let main_balance = parseFloat(document.getElementById('main_balance').innerText);
-const modal_overlay = document.getElementById('modal_overlay');
-const my_modal_1 = document.getElementById('my_modal_1');
+const modal_amount = document.getElementById ('modal_amount');
 
 // Noakhali Donation
 document.getElementById('noakhali_donate_btn').addEventListener('click', function () {
@@ -45,6 +48,8 @@ document.getElementById('noakhali_donate_btn').addEventListener('click', functio
         document.getElementById('amount_error').classList.add('hidden');
     }
 
+    
+
     const noakhali_donate_amount = noakhali_donate_current_amount + noakhali_input;
     document.getElementById('noakhali_donate_current_amount').innerText = noakhali_donate_amount.toFixed(2);
 
@@ -52,6 +57,11 @@ document.getElementById('noakhali_donate_btn').addEventListener('click', functio
     document.getElementById('main_balance').innerText = main_balance.toFixed(2);
 
     document.getElementById('noakhali_input').value = '';
+
+    my_modal_1.showModal();
+    // modal amount
+
+    modal_amount.innerText = noakhali_input;
 
     // noakhali history list
     const noakhali_title = document.getElementById('noakhali_title');
@@ -65,7 +75,8 @@ document.getElementById('noakhali_donate_btn').addEventListener('click', functio
 
     const history_container = document.getElementById('history_list');
     history_container.insertBefore(history_item, history_container.firstChild);
-    console.log('history list', history_container);
+
+    
 
 });
 
@@ -94,6 +105,12 @@ document.getElementById('feni_donate_btn').addEventListener('click', function ()
     document.getElementById('main_balance').innerText = main_balance.toFixed(2);
 
     document.getElementById('feni_input').value = '';
+
+    my_modal_1.showModal();
+
+    // modal amount
+
+    modal_amount.innerText = feni_input;
 
     // feni history list
     const feni_title = document.getElementById('feni_title');
@@ -136,6 +153,12 @@ document.getElementById('qouta_donate_btn').addEventListener('click', function (
     document.getElementById('main_balance').innerText = main_balance.toFixed(2);
 
     document.getElementById('qouta_input').value = '';
+
+    my_modal_1.showModal();
+
+    // modal amount
+
+    modal_amount.innerText = qouta_input;
 
     // qouta history list
     const qouta_title = document.getElementById('qouta_title');
@@ -204,4 +227,11 @@ donation_tab.addEventListener('click', function () {
     donation_part.classList.remove(
         "hidden"
     );
+});
+
+
+// blog part seciotn
+
+document.getElementById("blog").addEventListener("click", function () {
+    window.location.href = "./blog.html";
 });

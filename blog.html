@@ -16,6 +16,7 @@
     <!-- font awesome icons cdn link -->
     <script src="https://kit.fontawesome.com/caf423a0ab.js" crossorigin="anonymous"></script>
     <title>Blog Page</title>
+    
     <style>
         .font-lexend {
             font-family: "Lexend", sans-serif;
@@ -30,7 +31,7 @@
         <div class=" bg-[#F9F7F3]  ">
             <div class="w-11/12	 mx-auto flex items-center justify-around pt-9 py-20">
                 <div>
-                    <button id="blog" class="text-xl font-semibold bg-[#B4F461] py-3 px-8 rounded-xl">Home</button>
+                    <button id="home" class="text-xl font-semibold bg-[#B4F461] py-3 px-8 rounded-xl">Home</button>
                 </div>
                 <div class="flex items-center gap-4">
                     <div><img src="./assets/logo.png" alt=""></div>
@@ -80,6 +81,13 @@
               </div>
         </div>
     </main>
+
+      <script>
+
+        document.getElementById("home").addEventListener("click", function () {
+            window.location.href = "./index.html";
+        });
+    </script>
 
 </body>
 

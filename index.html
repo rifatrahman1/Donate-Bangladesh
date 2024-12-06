@@ -132,7 +132,9 @@
                     <p id="amount_error3" class="text-red-500 text-xs mt-1 hidden">
                         ⚠️ Invalid Amount!
                     </p>
-                    <button id="qouta_donate_btn" onclick="my_modal_1.showModal()"
+                    <!-- onclick="my_modal_1.showModal()"  -->
+                    <button id="qouta_donate_btn" 
+                    onclick="showModal('rifat', 'hasan')"
                         class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate
                         Now</button>
                 </div>
@@ -143,13 +145,15 @@
         <!-- modal section start -->
 
         <!-- You can open the modal using ID.showModal() method -->
-        <div class="modal-overlay" id="modal_overlay"></div>
-        <dialog id="my_modal_1" onclick="my_modal_1.showModal()" class="modal">
+        <dialog id="my_modal_1" onclick="my_modal_1.showModal()" class="modal ">
             <section
                 class="bg-white px-20 py-12 font-roboto  w-[700px] h-[500px] rounded-2xl flex flex-col justify-center items-center text-center">
                 <!-- <img src="./images/.png" alt=""> -->
                 <h3 class="text-5xl font-bold text-[#27AE60] mt-10">Congrates!</h3>
-                <img class="w-14 h-14 mt-5" src="./assets/coin.png" alt="">
+                <div class="flex gap-4 items-center">
+                    <img class="w-14 h-14 mt-5" src="./assets/coin.png" alt="">
+                    <p class="text-3xl mt-4"><span id="modal_amount" class="text-[#27AE60]">0</span> Taka Donate Now</p>
+                </div>
                 <p class="font-medium text-2xl text-[#4A4A4A] mt-10">You Have Donated for Humankind</p>
                 <p class="text-3xl font-bold text-[#4A4A4A] mt-4">Successfully</p>
                 <form method="dialog">
@@ -178,7 +182,6 @@
     <!-- footer section end -->
 
     <script src="./JS/donate.js"></script>
-    <script src="./JS/utilities.js"></script>
 
 </body>
 
