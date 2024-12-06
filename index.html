@@ -40,19 +40,19 @@
                 </div>
             </div>
         </div>
-            <div class="flex items-center justify-center pt-20 gap-4 bg-white pb-8 bg-opacity-95">
-                <button class="bg-[#B4F461] text-xl font-semibold py-4 px-8 rounded-lg">Donation</button>
-                <button
-                    class="text-xl font-semibold py-4 px-8 rounded-lg text-[#111111B3] border border-[#1111114D]">History</button>
-            </div>
+        <div class="flex items-center justify-center pt-20 gap-4 bg-white pb-8 bg-opacity-95">
+            <button id="donation_tab" class="bg-[#B4F461] text-xl font-semibold py-4 px-8 rounded-lg">Donation</button>
+            <button id="history_tab"
+                class="text-xl font-semibold py-4 px-8 rounded-lg text-[#111111B3] border border-[#1111114D]">History</button>
+        </div>
     </nav>
     <!-- navbar section end -->
 
     <!-- main section start -->
-    <main class="mt-8">
+    <main id="donation_part" class="mt-8 lg:px-0 px-7">
         <!-- donation section start -->
         <section class="lg:w-[1170px] mx-auto space-y-8 mb-8">
-            <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
+            <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col  gap-8 items-center p-8">
                 <!-- noakhali donation images-->
                 <div>
                     <img src="./assets/noakhali.png" alt="">
@@ -63,8 +63,9 @@
                         <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="">
                         <p class="text-[#111111B3]"><span id="noakhali_donate_current_amount">0</span> BDT</p>
                     </div>
-                    <h3 class="text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h3>
-                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to <br> homes infrastructure. Your
+                    <h3 id="noakhali_title" class="text-xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to
+                        <br> homes infrastructure. Your
                         donation will help provide essential <br> supplies and to those affected by this disaster. Every
                         contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
                         efforts and making a positive impact on the lives of those in need.</p>
@@ -74,7 +75,10 @@
                     <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
                         ⚠️ Invalid Amount!
                     </p>
-                    <button id="noakhali_donate_btn" class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4"onclick="my_modal_1.showModal()">Donate Now</button>
+                    <!-- onclick="my_modal_1.showModal()" -->
+                    <button id="noakhali_donate_btn"
+                        class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate
+                        Now</button>
                 </div>
             </div>
             <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
@@ -84,47 +88,53 @@
                 </div>
                 <!-- feni title -->
                 <div class="mt-4 lg:mt-0">
-                    <div class="flex w-[110px] items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
+                    <div class="flex w-2/5 items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
                         <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="">
-                        <p class="text-[#111111B3]"><span>0</span> BDT</p>
+                        <p class="text-[#111111B3]"><span id="feni_donate_current_amount">0</span> BDT</p>
                     </div>
-                    <h3 class="text-xl font-bold mt-4">Donate for Flood Relief in Feni,Bangladesh</h3>
-                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to <br> homes infrastructure. Your
+                    <h3 id="feni_title" class="text-xl font-bold mt-4">Donate for Flood Relief in Feni,Bangladesh</h3>
+                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to
+                        <br> homes infrastructure. Your
                         donation will help provide essential <br> supplies and to those affected by this disaster. Every
                         contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
                         efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="donation" type="number"
+                    <input id="feni_input" type="number"
                         class="w-full mt-6 border border-gray-300 px-3 py-2 rounded-md "
                         placeholder="Write Donation Amount" />
-                    <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
+                    <p id="amount_error2" class="text-red-500 text-xs mt-1 hidden">
                         ⚠️ Invalid Amount!
                     </p>
-                    <button id="feni_donate_btn" class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate Now</button>
+                    <button id="feni_donate_btn"
+                        class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate
+                        Now</button>
                 </div>
             </div>
             <div class="border border-[#1111111A] rounded-2xl flex lg:flex-row flex-col gap-8 items-center p-8">
-                <!-- noakhali donation images-->
+                <!-- qouta donation images-->
                 <div>
                     <img class="h-[390px] w-[522px]" src="./assets/quota-protest.png" alt="">
                 </div>
-                <!-- noakhali title -->
+                <!-- quota movement title -->
                 <div class="mt-4 lg:mt-0">
-                    <div class="flex w-[110px] items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
+                    <div class="flex w-2/5 items-center gap-3 bg-[#1111110D] py-[10px] px-[16px] rounded-lg">
                         <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="">
-                        <p class="text-[#111111B3]"><span>0</span> BDT</p>
+                        <p class="text-[#111111B3]"><span id="qouta_donate_current_amount">0</span> BDT</p>
                     </div>
-                    <h3 class="text-xl font-bold mt-4">Aid for Injured in the Quota Movement</h3>
-                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to <br> homes infrastructure. Your
+                    <h3 id="qouta_title" class="text-xl font-bold mt-4">Aid for Injured in the Quota Movement</h3>
+                    <p class="text-[#111111B3] mt-4"> The recent floods in Noakhali have caused significant damage to
+                        <br> homes infrastructure. Your
                         donation will help provide essential <br> supplies and to those affected by this disaster. Every
                         contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
                         efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="donation" type="number"
+                    <input id="qouta_input" type="number"
                         class="w-full mt-6 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                         placeholder="Write Donation Amount" />
-                    <p id="amount_error" class="text-red-500 text-xs mt-1 hidden">
+                    <p id="amount_error3" class="text-red-500 text-xs mt-1 hidden">
                         ⚠️ Invalid Amount!
                     </p>
-                    <button id="quota_donate_btn" class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate Now</button>
+                    <button id="qouta_donate_btn" onclick="my_modal_1.showModal()"
+                        class="text-xl font-semibold bg-[#B4F461] lg:w-full w-full py-4 px-8 rounded-lg mt-4">Donate
+                        Now</button>
                 </div>
             </div>
         </section>
@@ -132,34 +142,43 @@
 
         <!-- modal section start -->
 
-         <!-- You can open the modal using ID.showModal() method -->
-
-<dialog id="my_modal_1" class="modal hidden">
-        <section class="bg-white px-20 py-12 font-roboto  w-[700px] h-[500px] rounded-2xl flex flex-col justify-center items-center text-center">
-            <!-- <img src="./images/.png" alt=""> -->
-            <h3 class="text-5xl font-bold text-[#27AE60] mt-10">Congrates!</h3>
-            <img class="w-14 h-14 mt-5" src="./assets/coin.png" alt="">
-            <p class="font-medium text-2xl text-[#4A4A4A] mt-10">You Have Donated for Humankind</p>
+        <!-- You can open the modal using ID.showModal() method -->
+        <div class="modal-overlay" id="modal_overlay"></div>
+        <dialog id="my_modal_1" onclick="my_modal_1.showModal()" class="modal">
+            <section
+                class="bg-white px-20 py-12 font-roboto  w-[700px] h-[500px] rounded-2xl flex flex-col justify-center items-center text-center">
+                <!-- <img src="./images/.png" alt=""> -->
+                <h3 class="text-5xl font-bold text-[#27AE60] mt-10">Congrates!</h3>
+                <img class="w-14 h-14 mt-5" src="./assets/coin.png" alt="">
+                <p class="font-medium text-2xl text-[#4A4A4A] mt-10">You Have Donated for Humankind</p>
                 <p class="text-3xl font-bold text-[#4A4A4A] mt-4">Successfully</p>
                 <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button id="continue_btn" class=" text-white text-xl font-semibold mt-9 bg-[#27AE60] rounded-[32px] px-24 py-4">Continue</button>
+                    <button id="continue_btn"
+                        class=" text-white text-xl font-semibold mt-9 bg-[#27AE60] rounded-[32px] px-24 py-4">Continue</button>
                 </form>
-        </section>
-    </div>
-</dialog>
+            </section>
+            </div>
+        </dialog>
         <!-- modal section end -->
 
         <!-- donation section end -->
     </main>
     <!-- main section end -->
 
-    <!-- footer section start -->
-     <footer class="bg-[#F9F7F3] py-20 mt-20">
+    <!-- history list seciton -->
+        <div class="lg:px-0 px-7">
+            <div id="history_list" class="mt-10 lg:w-[1170px] mx-auto space-y-8 hidden">
 
-     </footer>
+            </div>
+        </div>
+
+    <!-- footer section start -->
+    <footer id="footer_part" class="bg-[#F9F7F3] py-20 mt-20"></footer>
     <!-- footer section end -->
 
+    <script src="./JS/donate.js"></script>
+    <script src="./JS/utilities.js"></script>
 
 </body>
 
